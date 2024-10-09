@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+<div style="text-align: center">
+  
 - 🔭 I'm 长柄木勺, a sophomore student
 - 🌱 I am learning computer technology related content and basic algorithmic knowledge
 - 😄 Tech stack: Javascript Vue Go Gin Mysql
@@ -9,3 +11,5 @@
 - 📫 How to reach me: changbingmushao@qq.com
 
 [![shaozicln's GitHub | Stats](https://stats.quira.sh/shaozicln/github?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=shaozicln)
+
+</div>
