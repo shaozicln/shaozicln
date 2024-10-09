@@ -7,3 +7,5 @@
 - 🤔 Current mini-goal: algorithmic fundamentals and general-purpose technical implementations
 - ⚡ Hobbies: gaming, watching anime and travelling, love to see different stories and landscapes
 - 📫 How to reach me: changbingmushao@qq.com
+
+[![shaozicln's GitHub | Stats](https://stats.quira.sh/shaozicln/github?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=shaozicln)
