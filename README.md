@@ -10,6 +10,8 @@
 - ⚡ Hobbies: gaming, watching anime and travelling, love to see different stories and landscapes
 - 📫 How to reach me: changbingmushao@qq.com
 
-[![shaozicln's GitHub | Stats](https://stats.quira.sh/shaozicln/github?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=shaozicln)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=shaozicln&layout=compact&theme=tokyonight)
+
+
 
 </div>
