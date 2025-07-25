@@ -10,11 +10,11 @@
 - ⚡ Hobbies: gaming, watching anime and travelling, love to see different stories and landscapes
 - 📫 How to reach me: changbingmushao@qq.com
 
-## Language Usage Statistics: 
+## Language Usage Statistics
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=shaozicln&layout=compact&theme=tokyonight)
 
-## Overview data: 
+## Overview data
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=shaozicln&show_icons=true&theme=dark&count_private=true)
 
 
