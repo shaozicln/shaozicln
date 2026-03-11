@@ -2,11 +2,8 @@
 
 <div style="text-align: center">
   
-- 🔭 I'm 长柄木勺, a sophomore student
-- 🌱 I am learning computer technology related content and basic algorithmic knowledge
-- 😄 Tech stack: Javascript Vue Go Gin Mysql
-- 💬 I've done: two front-end blogs, some web mini-games and fun little features
-- 🤔 Current mini-goal: algorithmic fundamentals and general-purpose technical implementations
+- 🔭 I'm 长柄木勺, a junior student
+- 🌱 I am currently studying computer-related technologies and the standardized development of AI
 - ⚡ Hobbies: gaming, watching anime and travelling, love to see different stories and landscapes
 - 📫 How to reach me: changbingmushao@qq.com
 
