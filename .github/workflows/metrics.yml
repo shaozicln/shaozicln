@@ -1,8 +1,8 @@
 name: Metrics
+
 on:
-  schedule:
-    - cron: "0 3 * * *"   # 每天UTC时间3点自动更新
-  workflow_dispatch:      # 允许手动触发
+  workflow_dispatch:       # 手动触发
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -11,10 +11,17 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           user: ${{ github.repository_owner }}
-          base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
           plugin_languages: yes
           plugin_languages_count: 8
           plugin_languages_sections: most-used
-          plugin_languages_ignored: html, css, dockerfile
           plugin_languages_details: bytes-size, percentage
+          # 关键修改：输出格式设为 'action'，这样文件会作为 Actions 的产物保留
+          output_action: action
+
+      # 这一步是把生成的文件上传为 Actions 产物，方便你下载
+      - name: Upload metrics result
+        uses: actions/upload-artifact@v4
+        with:
+          name: metrics-svg
+          path: ./*.svg          # 捕获所有生成的 SVG 文件
