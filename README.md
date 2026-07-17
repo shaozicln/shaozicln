@@ -1,6 +1,4 @@
-![Metrics](github-metrics.svg)
+![语言统计](profile/top-langs.svg)
 
 
-![GitHub Stats](profile/stats.svg)
-
-
+![综合统计](profile/stats.svg)
