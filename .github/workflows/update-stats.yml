@@ -1,0 +1,51 @@
+name: Update GitHub Stats Cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *"       # 每天 UTC 3:00 自动更新
+  workflow_dispatch:          # 支持手动触发
+
+permissions:
+  contents: write             # 允许推送代码到仓库
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # 1. 生成语言统计卡片 → profile/top-langs.svg
+      - name: Generate top languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GH_PAT }}
+          user: ${{ github.repository_owner }}
+          config_timezone: Asia/Shanghai
+          plugin_languages: yes
+          plugin_languages_count: 8
+          plugin_languages_details: bytes-size, percentage
+          filename: profile/top-langs.svg
+          output_action: action   # 只生成文件，不自动提交
+
+      # 2. 生成综合统计卡片 → profile/stats.svg
+      #    base 包含：头像、总星标、提交数、PR、Issues、仓库数等
+      - name: Generate stats
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GH_PAT }}
+          user: ${{ github.repository_owner }}
+          config_timezone: Asia/Shanghai
+          base: header, activity, community, repositories, metadata
+          filename: profile/stats.svg
+          output_action: action
+
+      # 3. 统一提交两张图片到仓库
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add profile/*.svg
+          git commit -m "Update stats cards" || echo "No changes to commit"
+          git push origin main
